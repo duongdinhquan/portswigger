@@ -1,0 +1,8 @@
+phân tích : 	+ k dùng được X-Forwarded-For: như lap trước
+			+ đăng nhập sai 3 lần thì sẽ bị khóa nhưng web này reset ip nếu đăng nhập đúng <phải login đúng ở lần thứ 3 là tối ưu nhất>
+			+ tạo một đoạn mã đăng nhập đúng vào lần thứ 3
+
+solution : 	+ tạo 2 list chứa password và username
+		+ dùng intruder để chạy tìm ra password và username
+		+LOGIN : username : carlos
+				password : 111111
