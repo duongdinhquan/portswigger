@@ -1,0 +1,8 @@
+			+ login như bình thường và nhận thấy sau khi nhập sai invalid username or invalid password thì nhận thấy không bị khóa 
+			+ thử brute-force và password nhưng k thấy sự khác biệt ,thử brute-force một username nhiều lần(5 lần) với một password thì nhận thấy sự khác biệt  :"You have made too many incorrect login attempts. Please try again in 1 minute(s)." 
+			+ => khả năng đây là valid username : asterix   bị khóa ở lần thứ 4
+			+  brute-force password với valid username : asterix
+
+
+login : username : asterix
+	password : 1234567890
