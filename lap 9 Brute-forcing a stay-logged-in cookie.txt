@@ -1,0 +1,20 @@
+			Brute-forcing a stay-logged-in cookie
+
+phân tich : +  lap nay sử dung cookie để ghi  nhớ đăng nhập 
+  		 + stay-logged-in=d2llbmVyOjUxZGMzMGRkYzQ3M2Q0M2E2MDExZTllYmJhNmNhNzcw  <có vẻ như value  được mã hóa BASE 64  >
+		 + "https://gchq.github.io/CyberChef/" kiểm tra giải mã  
+ 			=>> wiener:51dc30ddc473d43a6011e9ebba6ca770  <cấu trúc "tên user: mật khẩu ">
+		+ 51dc30ddc473d43a6011e9ebba6ca770   : dạng mã hóa cho mật khẩu MD5 <32 kí tự , chữ thường , từ 0-9>
+		+ "https://10015.io/tools/md5-encrypt-decrypt" để giải mã MD5   ==> peter - mật khẩu của user
+		====> suy luận trên là đúng 
+
+solution : + brute-fore cookies : 	- thêm password như bình thường	
+						- Chọn Add trong mục Payload Proccessing, chọn Hash và MD5 để mã hóa password trước
+						- Tiếp theo, thêm tiền tố carlos: (lưu ý có dấu :) <add prefix : carlos:>
+						- thực hiện mã hóa Base64: <encode --> base64>
+
+		+ Cookie: stay-logged-in=Y2FybG9zOmRmNTNjYTI2ODI0MGNhNzY2NzBjODU2NmVlNTQ1Njhh  thỏa mãn
+		+ giải ngược tìm ra kết quả :  	carlos:df53ca268240ca76670c8566ee54568a
+						     password : computer
+
+
