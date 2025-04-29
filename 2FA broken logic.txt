@@ -1,0 +1,12 @@
+		Lab 2FA broken logic
+
+Phân tích : + lap này sử dụng cookies để theo dõi người dùng .
+		sau khi đăng nhập thì server cấp cho user một cookies : verify=wiener; session=X21kpXRZ3Nr67ekbpAocfc4b5JVG35as
+		+ thay đổi wiener thành carlos thì vẫn thấy server gửi code về email : 0737 
+		+ xóa phần session mà sau đó gửi request xem có hoạt động không  ==> vẫn hoạt động nhưng mà ở email không thấy mã gửi về 
+		+ kiểm tra thấy request GET y/c mã F2A không có cơ chế brute force protection 
+		==> brute force để đoán mã F2A
+solution : + brute force để đoán mã F2A 
+	==> 0112
+		+ session=DqSiMwQpGpbVE6qA2X8AqALkXAndCN7t
+		+ Location: /my-account?id=carlos
